@@ -81,7 +81,7 @@ const CartPage = () => {
 
 
           <div>
-       <div className="relative border bottom-0 border-t-slate-400 border-r-0 border-l-0 border-b-0 mt-16">
+       <div className="absolute right-0 left-0 border bottom-0 border-t-slate-400 border-r-0 border-l-0 border-b-0 mt-16">
        <div className="flex flex-col items-center py-3 text-slate-400">
          <h1>Copyright &copy; 2024. All rights reserved</h1>
           <h1>Designed by Timi-tech (X: @Timi_tech_)</h1>
