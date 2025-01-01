@@ -1,7 +1,6 @@
 import React from 'react'
 import Homie from '../components/homie/Homie'
-import Carous from '../components/homie/carous'
-import { hero } from '../components/homie/Homie'
+import Carous from '../components/homie/Carous'
 import { Mail } from 'lucide-react'
 import SemiFooter from '../components/semiFooter/SemiFooter'
 
