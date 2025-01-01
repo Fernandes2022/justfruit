@@ -5,8 +5,8 @@ import { Minus, Plus, Trash, X } from 'lucide-react';
 const CartPage = () => {
   const {cart, removeFromCart, clearCart, increaseCart, reduceFromCart, total} = useContext(CartContext);
   return (
-    <div>
-      <div>
+    <div >
+      <div className='flex flex-col '>
         <div className="mt-24">
           <h1 className="text-3xl text-center font-semibold">
             Your Cart Items
@@ -62,7 +62,7 @@ const CartPage = () => {
             </div>
           </div>
 
-          <div className=''>
+          <div className='mb-44'>
             <div className="bg-gradient-to-r from-purple-600 to-purple-300 mt-16 my-6 mx-auto sm:w-[400px] md:p-6 p-4 md:px-10 px-6 text-white flex justify-between">
               <div className='flex gap-3 items-center'>
                 <h1 className="text-xl font-bold ">
@@ -80,16 +80,18 @@ const CartPage = () => {
           </div>
 
 
-          <div>
-       <div className="absolute right-0 left-0 border bottom-0 border-t-slate-400 border-r-0 border-l-0 border-b-0 mt-16">
+          
+       
+        </div>
+        
+        </div>
+        
+        <div className="border border-t-slate-400 border-r-0 border-l-0 border-b-0 mb-0 ">
        <div className="flex flex-col items-center py-3 text-slate-400">
          <h1>Copyright &copy; 2024. All rights reserved</h1>
           <h1>Designed by Timi-tech (X: @Timi_tech_)</h1>
-      	 </div>
-         </div>
-        </div>
-        </div>
-      </div>
+       </div>
+       </div>
     </div>
   )
 }

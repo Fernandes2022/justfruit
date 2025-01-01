@@ -24,7 +24,7 @@ const Product = ({product}) => {
      </div>
 
      <div className='relative '>
-      <Link to={'/cartpage'}>
+      <Link to={"/cartpage"}>
       <ShoppingBag className='text-green-700'/>
        
       </Link>

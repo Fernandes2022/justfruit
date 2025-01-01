@@ -13,7 +13,7 @@ const Header = () => {
       <div className="flex justify-between space-x-3 p-2 items-center border-t-slate-300 border-b-slate-300 border right-0 left-0 top-0 fixed z-50 pr-8 md:px-12">
        
        <div>
-        <Link to={'/'}>
+        <Link to={"/"}>
         <h1 className='text-sm bg-gradient-to-b from-green-200 to-green-800 bg-clip-text text-transparent'>
          just<span className='text-3xl font-bold font-sans'>FRUITS</span>
         </h1></Link>
@@ -33,7 +33,7 @@ const Header = () => {
          <User className='text-slate-600 w-6 h-6'/>
         </div>
         <div className='rounded-full border border-slate-400 p-1'>
-         <Link to={'/cartpage'}>
+         <Link to={"/cartpage"}>
          <ShoppingCart className='text-slate-600 w-6 h-6'/>
          <div className="absolute top-0 z-50 bg-green-400 text-white rounded-full ">
          <p className=''>{amount}</p>
