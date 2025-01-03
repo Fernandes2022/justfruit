@@ -30,7 +30,7 @@ const footer = [
 const SemiFooter = () => {
   return (
     <div>
-     <section>
+     <section >
       <div className='mt-4 px-8 mb-6 md:pl-12'>
        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 '>
         {footer.map((item) => (

@@ -143,7 +143,7 @@ const Test = () => {
         </div>
 
         <div className="mt-4 px-4 container mb-8">
-          <div id='shop' className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-4 scroll-mt-[9rem]" data-aos='fade-up' data-aos-delay='600' data-aos-duration='1000'>
+          <div id='shop1' className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-4 " data-aos='fade-up' data-aos-delay='600' data-aos-duration='1000'>
             {product.map(item => {
               return <Product  key={item.id} product={item}/>
             })}
