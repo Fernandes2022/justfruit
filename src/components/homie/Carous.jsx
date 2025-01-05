@@ -65,10 +65,10 @@ const Carous = () => {
                {item.title}</h1>
                <p className='text-slate-400 text-xl'>{item.start}</p>
                <p className='text-red-500'>$ {item.price}</p>
-               <Link to='/cartpage' className='bg-black rounded-full font-semibold w-[130px] p-2 flex gap-2'>
+               <a href="#shop1" className='bg-black rounded-full font-semibold w-[130px] p-2 flex gap-2'>
                <p className='text-white'>Shop now</p>
                <ArrowRight className='text-white'/>
-               </Link>
+               </a>
              </div>
             </div>
           </div>
@@ -96,10 +96,10 @@ const Carous = () => {
                {item.title}</h1>
                <p className='text-slate-400 text-xl'>{item.start}</p>
                <p className='text-red-500'>$ {item.price}</p>
-               <Link to='/cartpage' className='bg-black rounded-full font-semibold w-[130px] p-2 flex gap-2'>
+               <a href="#shop1" className='bg-black rounded-full font-semibold w-[130px] p-2 flex gap-2'>
                <p className='text-white'>Shop now</p>
                <ArrowRight className='text-white'/>
-               </Link>
+               </a>
              </div>
             </div>
           </div>
@@ -125,10 +125,10 @@ const Carous = () => {
                {item.title}</h1>
                <p className='text-slate-400 text-xl'>{item.start}</p>
                <p className='text-red-500'>$ {item.price}</p>
-               <Link to='/cartpage' className='bg-black rounded-full font-semibold w-[130px] p-2 flex gap-2'>
+               <a href="#shop1" className='bg-black rounded-full font-semibold w-[130px] p-2 flex gap-2'>
                <p className='text-white'>Shop now</p>
                <ArrowRight className='text-white'/>
-               </Link>
+               </a>
              </div>
             </div>
           </div>
