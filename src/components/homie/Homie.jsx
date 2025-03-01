@@ -19,19 +19,19 @@ import Product from '../product/Product'
 export const hero = [
   {
     image: hero1,
-    title: 'Dried Fruits Best Healthy',
+    title: 'Focus On Freshness & Quality',
     start: 'Starting At',
     price: 17
   },
   {
     image: hero2,
-    title: 'Best Yummy Pizza',
+    title: 'Focus On Variety & Choice',
     start: 'Starting At',
     price: 20
   },
   {
     image: hero3,
-    title: 'Best Yummy Chips',
+    title: 'Focus On Health & Benefits',
     start: 'Starting At',
     price: 8
   }
