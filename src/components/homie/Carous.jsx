@@ -61,7 +61,7 @@ const Carous = () => {
               {item.price === 17 && '100% Original Dry Fruits'}
              </div>
              <div className='flex flex-col gap-4'>
-              <h1 className='text-2xl font-bold'>
+              <h1 className='text-2xl text-white font-bold'>
                {item.title}</h1>
                <p className='text-slate-400 text-xl'>{item.start}</p>
                <p className='text-red-500'>$ {item.price}</p>
@@ -84,15 +84,15 @@ const Carous = () => {
           {item.price === 17 && 
           <div className='relative' >
             <div>
-              <img className='w-full' src={item.image} alt="" />
+              <img className='w-full h-full' src={item.image} alt="" />
             </div>
 
-            <div className="absolute top-[20%] pl-10">
+            <div className="absolute top-[20%] left-[25%]">
              <div className='text-green-300'>
               {item.price === 17 && '100% Original Dry Fruits'}
              </div>
              <div className='flex flex-col gap-4'>
-              <h1 className='text-2xl font-bold'>
+              <h1 className='text-2xl text-white font-bold'>
                {item.title}</h1>
                <p className='text-slate-400 text-xl'>{item.start}</p>
                <p className='text-red-500'>$ {item.price}</p>
@@ -107,7 +107,7 @@ const Carous = () => {
          </div>
         })}
         </div>
-        <div>
+        {/* <div>
         {hero.map((item) => {
          return <div>
           {item.price !== 17 && 
@@ -135,7 +135,7 @@ const Carous = () => {
          }
          </div>
         })}
-        </div>
+        </div> */}
         </div>
     </div>
      </div>

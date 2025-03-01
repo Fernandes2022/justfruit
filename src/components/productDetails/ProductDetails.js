@@ -4,8 +4,7 @@ import  product2 from '../../assets/product__2.webp'
 import product3 from '../../assets/product__3.webp'
 import product4 from '../../assets/product__4.webp'
 import product5 from '../../assets/product__5.webp'
-import product6 from '../../assets/product__6.webp'
-import product7 from '../../assets/product__7.webp'
+
 
 import category1 from '../../assets/category__1.webp'
 import category2 from '../../assets/category__2.webp'
@@ -87,14 +86,14 @@ const products = [
  {
   id: 6,
   title: 'Fruit Pack',
-  image: product6,
+  image: category1,
   price: 600,
   rating: rating
  },
  {
   id: 7,
   title: 'Kellogy Noodles',
-  image: product7,
+  image: category2,
   price: 250,
   rating: rating
  }
