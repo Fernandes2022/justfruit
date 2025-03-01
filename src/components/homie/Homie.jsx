@@ -106,7 +106,7 @@ const Test = () => {
     <Slider {...settings}>
     {category.map((item) => (
       <div data-aos='fade-left' data-aos-delay='800' data-aos-duration='1000'>
-        <div className="flex bg-gradient-to-r from-green-200 to-red-300 items-center py-4 space-x-6 shadow-sm rounded-xl mx-2 justify-center px-10">
+        <div className="flex bg-gradient-to-l from-green-100 to-red-400 items-center py-4 space-x-6 shadow-sm rounded-xl mx-2 justify-center px-10">
           <div className='flex flex-col gap-2'>
             <h1 className='font-semibold text-green-600'>
               {item.title}
