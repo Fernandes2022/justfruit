@@ -65,9 +65,9 @@ const Carous = () => {
                {item.title}</h1>
                <p className='text-slate-400 text-xl'>{item.start}</p>
                <p className='text-red-500'>$ {item.price}</p>
-               <a href="#shop1" className='bg-black rounded-full font-semibold w-[130px] p-2 flex gap-2'>
-               <p className='text-white'>Shop now</p>
-               <ArrowRight className='text-white'/>
+               <a href="#shop1" className='bg-gradient-to-r from-green-400 to-red-700 rounded-full font-semibold w-32 text-center p-2  text-white'>
+               Shop Now
+               
                </a>
              </div>
             </div>

@@ -4,9 +4,9 @@ import { CartContext } from '../cartProvider/CartProvider'
 import hero1 from '../../assets/fruit-1.jpg'
 import hero2 from '../../assets/fruit-2.jpg'
 import hero3 from '../../assets/fruit-3.jpg'
-import post1 from '../../assets/post__1.webp'
-import post2 from '../../assets/post__2.webp'
-import post3 from '../../assets/post__3.webp'
+import post1 from '../../assets/fruit-banner-1.jpg'
+import post2 from '../../assets/fruit-banner-2.jpg'
+import post3 from '../../assets/fruit-banner-3.jpg'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import { category } from '../productDetails/ProductDetails'
@@ -39,17 +39,17 @@ export const hero = [
 
 const post = [
   {
-    name: 'Healthy Food, Healthy Life',
+    name: 'Fruits So Fresh, It Is Still Smiling',
     date: 'December 21st, 2024',
     image: post1
   },
   {
-    name: 'Healthy Food, Healthy Life',
+    name: 'Your Daily Dose Of Delicious',
     date: 'December 23rd, 2024',
     image: post2
   },
   {
-    name: 'Healthy Food, Healthy Life',
+    name: 'Life Is A Lot Better With Fruits',
     date: 'December 26th, 2024',
     image: post3
   }
@@ -100,13 +100,13 @@ const Test = () => {
   return (
    <div>
    
-   <div data-aos='flip-down' data-aos-delay='300' className='px-10 py-8  bg-gray-200 mb-8'>
+   <div data-aos='flip-down' data-aos-delay='300' className='px-10 py-8  bg-gradient-to-r from-green-400 to-red-600 mb-8'>
     <div >
     <Link to={'/cartpage'}>
     <Slider {...settings}>
     {category.map((item) => (
       <div data-aos='fade-left' data-aos-delay='800' data-aos-duration='1000'>
-        <div className="flex bg-gray-100 items-center py-4 space-x-6 border rounded-xl mx-2 justify-center px-10">
+        <div className="flex bg-gradient-to-r from-green-200 to-red-300 items-center py-4 space-x-6 shadow-sm rounded-xl mx-2 justify-center px-10">
           <div className='flex flex-col gap-2'>
             <h1 className='font-semibold text-green-600'>
               {item.title}

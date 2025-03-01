@@ -22,7 +22,7 @@ const Home = () => {
       <Homie />
       </div>
 
-      <div className='bg-gradient-to-r from-gray-800 to-gray-600 md:mx-12 mb-8'>
+      <div className='bg-gradient-to-r from-green-400 to-red-600 md:mx-12 mb-8'>
         <div className='py-3 px-6 flex flex-col md:flex-row md:justify-between items-center gap-4' data-aos='zoom-in-up' data-aos-delay='800' data-aos-duration='1000'>
           <div className='flex items-center gap-3  text-white'>
             <div>
