@@ -1,9 +1,17 @@
-import React from 'react'
 import Slider from 'react-slick'
-import { hero } from './Homie'
-import { ArrowBigRight, ArrowRight } from 'lucide-react'
-import Aos from 'aos'
-import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+import hero1 from '../../assets/fruit-1.jpg'
+import hero2 from '../../assets/fruit-2.jpg'
+import hero3 from '../../assets/fruit-3.jpg'
+
+
+
+const hero = [
+  { image: hero1, title: 'Focus On Freshness & Quality', start: 'Starting At', price: 17 },
+  { image: hero2, title: 'Focus On Variety & Choice', start: 'Starting At', price: 20 },
+  { image: hero3, title: 'Focus On Health & Benefits', start: 'Starting At', price: 8 },
+]
+
 const Carous = () => {
 
  const settings = {
@@ -51,7 +59,7 @@ const Carous = () => {
      <div className='md:hidden mb-2 '>
      <Slider {...settings}>
         {hero.map((item) => (
-          <div className='relative' data-aos='fade-up' data-aos-delay='500' data-aos-duration='1000'>
+          <div key={item.title} className='relative' data-aos='fade-up' data-aos-delay='500' data-aos-duration='1000'>
             <div>
               <img className='w-full h-[400px]' src={item.image} alt="" />
             </div>
@@ -80,7 +88,7 @@ const Carous = () => {
         <div className='flex items-' data-aos='fade-up' data-aos-delay='500'>
         <div >
         {hero.map((item) => {
-         return <div>
+         return <div key={item.title}>
           {item.price === 17 && 
           <div className='relative' >
             <div>

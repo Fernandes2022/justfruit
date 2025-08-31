@@ -1,47 +1,70 @@
-import { SearchIcon, ShoppingCart, User } from 'lucide-react'
-import React, { useContext } from 'react'
+import { ShoppingCart, User } from 'lucide-react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../cartProvider/CartProvider'
+import { CartContext } from '../cartProvider/CartContext'
+import { ProductContext } from '../productDetails/ProductProvider'
+
 
 const Header = () => {
 
   const {amount} = useContext(CartContext);
+  const { searchQuery, setSearchQuery } = useContext(ProductContext);
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    const productsSection = document.getElementById('shop1');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
   return (
     <div>
      <section>
-      <div className="flex justify-between space-x-3 p-2 items-center border-t-slate-300 border-b-slate-300 border right-0 left-0 top-0 fixed z-50 pr-8 md:px-12">
+      <div className="flex justify-between items-center p-3 md:p-4 border-b border-slate-200 bg-white/80 backdrop-blur right-0 left-0 top-0 fixed z-50 md:px-12">
        
-       <div>
-        <Link to={"/"}>
-        <h1 className='text-sm bg-gradient-to-b from-green-200 to-green-800 bg-clip-text text-transparent'>
-         just<span className='text-3xl font-bold font-sans'>FRUITS</span>
-        </h1></Link>
+       <div className='flex items-center gap-2'>
+        <Link to={"/"} className='flex items-center gap-2'>
+          <h1 className='text-lg md:text-xl font-bold'>
+            <span className='bg-gradient-to-b from-green-600 to-green-800 bg-clip-text text-transparent'>just</span>
+            <span className='text-green-700'>FRUITS</span>
+          </h1>
+        </Link>
        </div>
 
-       <div>
-        <div className="flex gap-0 border rounded-xl p-1 space-x-1 ">
-         <input type="text"  placeholder='search for products' className=' border border-r-slate-300 border-t-0 border-l-0 border-b-0 max-w-[80px] sm:max-w-[200px] flex-1 overflow-hidden bg-transparent text-sm'/>
-         <a href="/cartpage">
-         <SearchIcon  className='w-5 text-slate-500 '/>
-         </a>
-        </div>
+       <div className='flex-1 max-w-xl mx-3 md:mx-8'>
+        <form onSubmit={handleSearchSubmit} className="flex items-center gap-2 border border-slate-300 rounded-full px-3 py-1 bg-white" autoComplete="off" role="search">
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onInput={(e) => setSearchQuery(e.currentTarget.value)}
+            placeholder='Search products...'
+            className='outline-none bg-transparent text-sm w-full'
+            aria-label='Search products'
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="none"
+            spellCheck={false}
+            enterKeyHint="search"
+            inputMode="search"
+            name="q"
+          />
+        </form>
        </div>
 
-       <div className='flex gap-2'>
-        <div className='rounded-full border border-slate-400 p-1'>
-         <User className='text-slate-600 w-6 h-6'/>
-        </div>
-        <div className='rounded-full border border-slate-400 p-1'>
-         <Link to={"/cartpage"}>
-         <ShoppingCart className='text-slate-600 w-6 h-6'/>
-         <div className="absolute top-0 z-50 bg-green-400 text-white rounded-full ">
-         <p className=''>{amount}</p>
-        </div>
-         </Link>
-        </div>
-
-        
+       <div className='flex items-center gap-3'>
+        <button className='rounded-full border border-slate-300 p-1 hover:bg-slate-50' aria-label='Account'>
+         <User className='text-slate-700 w-6 h-6'/>
+        </button>
+        <Link to={"/cartpage"} className='relative rounded-full border border-slate-300 p-1 hover:bg-slate-50' aria-label='Cart'>
+         <ShoppingCart className='text-slate-700 w-6 h-6'/>
+         {amount > 0 && (
+          <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 text-[11px] leading-[18px] text-white bg-green-600 rounded-full text-center">
+            {amount}
+          </span>
+         )}
+        </Link>
        </div>
       </div>
      </section>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../components/cartProvider/CartProvider'
+import { CartContext } from '../components/cartProvider/CartContext'
 import { Minus, Plus, Trash, X } from 'lucide-react';
 
 const CartPage = () => {

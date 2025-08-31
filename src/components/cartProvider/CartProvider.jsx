@@ -1,6 +1,7 @@
-import React, { createContext, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import { CartContext } from './CartContext'
 
-export const CartContext = createContext();
 const CartProvider = ({children}) => {
 
   
@@ -94,7 +95,7 @@ const addToCart = (product, id) => {
     }, 0)
 
     setAmount(amountTotal);
-  },)
+  }, [cart])
   
   const [total, setTotal] = useState(0);
 
@@ -104,7 +105,7 @@ const addToCart = (product, id) => {
     }, 0)
 
     setTotal(totalCal);
-  },)
+  }, [cart])
   
 
 console.log(total);
@@ -116,3 +117,7 @@ console.log(total);
 }
 
 export default CartProvider;
+
+CartProvider.propTypes = {
+  children: PropTypes.node
+}

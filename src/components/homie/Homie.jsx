@@ -1,41 +1,17 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { ProductContext } from '../productDetails/ProductProvider'
-import { CartContext } from '../cartProvider/CartProvider'
-import hero1 from '../../assets/fruit-1.jpg'
-import hero2 from '../../assets/fruit-2.jpg'
-import hero3 from '../../assets/fruit-3.jpg'
 import post1 from '../../assets/fruit-banner-1.jpg'
 import post2 from '../../assets/fruit-banner-2.jpg'
 import post3 from '../../assets/fruit-banner-3.jpg'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import { category } from '../productDetails/ProductDetails'
-import { ShoppingBag } from 'lucide-react'
 import Product from '../product/Product'
 
 
 
 
-export const hero = [
-  {
-    image: hero1,
-    title: 'Focus On Freshness & Quality',
-    start: 'Starting At',
-    price: 17
-  },
-  {
-    image: hero2,
-    title: 'Focus On Variety & Choice',
-    start: 'Starting At',
-    price: 20
-  },
-  {
-    image: hero3,
-    title: 'Focus On Health & Benefits',
-    start: 'Starting At',
-    price: 8
-  }
-];
+
 
 const post = [
   {
@@ -95,7 +71,6 @@ const Test = () => {
    }
 
   const {product} =  useContext(ProductContext);
-  const {addToCart} = useContext(CartContext);
   
   return (
    <div>
@@ -105,7 +80,7 @@ const Test = () => {
     <Link to={'/cartpage'}>
     <Slider {...settings}>
     {category.map((item) => (
-      <div data-aos='fade-left' data-aos-delay='800' data-aos-duration='1000'>
+      <div key={item.title} data-aos='fade-left' data-aos-delay='800' data-aos-duration='1000'>
         <div className="flex bg-gradient-to-l from-green-100 to-red-400 items-center py-4 space-x-6 shadow-sm rounded-xl mx-2 justify-center px-10">
           <div className='flex flex-col gap-2'>
             <h1 className='font-semibold text-green-600'>
@@ -161,7 +136,7 @@ const Test = () => {
           <div className="mb-8">
             <div className="mt-3 grid gap-4 grid-cols-1 md:grid-cols-3 ">
               {post.map((item) => (
-                <div className='flex flex-col gap-3 ' data-aos='flip-up' data-aos-delay='800' data-aos-duration='1000'>
+                <div key={item.name} className='flex flex-col gap-3 ' data-aos='flip-up' data-aos-delay='800' data-aos-duration='1000'>
                   <div>
                     <img src={item.image} className='w-full' alt="" />
                   </div>

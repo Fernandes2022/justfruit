@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { ShoppingBag } from 'lucide-react'
-import { CartContext } from '../cartProvider/CartProvider';
+import { CartContext } from '../cartProvider/CartContext';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 const Product = ({product}) => {
  const {id, image, title, rating, price} = product;
@@ -48,3 +49,13 @@ const Product = ({product}) => {
 }
 
 export default Product
+
+Product.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    image: PropTypes.any.isRequired,
+    title: PropTypes.string.isRequired,
+    rating: PropTypes.any.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
+}
